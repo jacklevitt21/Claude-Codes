@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Jack Levitt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="section" style="padding-top:56px;">
+    <div class="container">
+      <span class="eyebrow">Toolkit</span>
+      <h2 style="font-size:2.2rem;">Skills</h2>
+      <p style="max-width:60ch;margin-bottom:8px;">
+        Grouped by area. Edit data/skills.js to add, remove, or re-word any of these.
+      </p>
+      <p class="editable-note" style="max-width:60ch;">
+        A couple of items here are placeholders (e.g. "CAD Software") —
+        swap in the exact tools you use (SolidWorks, Fusion 360, MATLAB,
+        specific Python libraries, etc.) so recruiters see something precise.
+      </p>
+
+      <div class="skills-grid" id="skills-grid" style="margin-top:32px;"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="data/experience.js"></script>
+<script src="data/skills.js"></script>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+  mountSiteChrome('skills');
+  renderSkills('skills-grid');
+</script>
+</body>
+</html>

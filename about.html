@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Jack Levitt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="section" style="padding-top:56px;">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h2 style="font-size:2.2rem;max-width:20ch;">Engineer, researcher, builder.</h2>
+
+      <div class="about-grid" style="margin-top:40px;">
+        <div>
+          <div class="about-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:96px;height:96px;color:var(--color-accent);"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+          </div>
+          <p class="editable-note" style="margin-top:16px;">
+            Replace the icon above with a real headshot: save it to
+            assets/images/headshot.jpg and swap the &lt;svg&gt; block for
+            &lt;img src="assets/images/headshot.jpg"&gt;.
+          </p>
+          <ul class="info-list">
+            <li><span>Based in</span><span>Princeton, NJ</span></li>
+            <li><span>School</span><span>Princeton University</span></li>
+            <li><span>Studying</span><span><!-- TODO (Jack): your major --> —</span></li>
+            <li><span>Class of</span><span><!-- TODO (Jack): grad year --> —</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <p style="font-size:1.05rem;color:var(--color-text);">
+            I'm an undergraduate at Princeton University who likes building things
+            that work in the real world — whether that's a rocket's recovery system,
+            an assistive device for someone who needs one, or a model that makes
+            sense of a messy dataset.
+          </p>
+          <p>
+            <!-- TODO (Jack): this paragraph is a placeholder — replace with your
+                 own story: how you got into engineering, what you're curious
+                 about, what you're looking for (internships, full-time roles,
+                 research collaborators, etc). -->
+            My work spans hands-on mechanical design, quantitative research, and
+            team leadership. On the engineering side, I lead recovery systems
+            development for Princeton Rocketry and founded Empowered Innovations,
+            a nonprofit that designs and 3D-prints assistive devices. On the
+            research side, I've worked on climate data analysis, materials and
+            battery-chemistry modeling, and biology research on neurodegeneration
+            in Drosophila melanogaster models. Outside of engineering, I direct
+            programming for a couple of Princeton student organizations and edit
+            for The Daily Princetonian.
+          </p>
+
+          <h3 style="margin-top:40px;font-size:1.1rem;">What I'm working on</h3>
+          <p>
+            Right now: recovery system design for Princeton Rocketry, undergraduate
+            research at Princeton, and data analytics work on EV/battery materials
+            at Orbis-Metallicum.
+            <!-- TODO (Jack): update this as your current projects change. -->
+          </p>
+
+          <h3 style="margin-top:32px;font-size:1.1rem;">Beyond engineering</h3>
+          <p>
+            <!-- TODO (Jack): add a couple of personal-interest lines here —
+                 hobbies, what you do outside of work/school. Recruiters like
+                 seeing a person, not just a resume. -->
+            [Add a sentence or two about your interests outside of engineering —
+            hobbies, sports, music, whatever makes you, you.]
+          </p>
+
+          <div class="hero-actions" style="margin-top:32px;">
+            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+            <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="data/experience.js"></script>
+<script src="data/skills.js"></script>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+  mountSiteChrome('about');
+</script>
+</body>
+</html>
