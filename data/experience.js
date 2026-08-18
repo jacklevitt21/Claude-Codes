@@ -37,7 +37,7 @@ const EXPERIENCES = [
     category: 'engineering',
     dates: 'Sep 2025 – Present',
     location: 'Princeton, NJ',
-    image: null,
+    image: 'assets/images/recovery-systems-lead/openrocket-model.png',
     oneLiner: 'Parachute recovery systems and CFD analysis for 30,000-ft high-powered rockets.',
     summary: 'Leads recovery systems engineering for the team’s 30,000-ft high-powered rockets — parachute deployment mechanisms, aerodynamic analysis, and structural hardware.',
     bullets: [
@@ -46,7 +46,11 @@ const EXPERIENCES = [
       'Designed, fabricated, and validated optimized bulkhead structures using CAD and manufacturing processes, improving structural performance while optimizing subsystem mass.'
     ],
     tags: ['CAD', 'CFD', 'OpenRocket', 'Manufacturing'],
-    gallery: []
+    gallery: [
+      { src: 'assets/images/recovery-systems-lead/openrocket-model.png', caption: 'Rocket model in OpenRocket' },
+      { src: 'assets/images/recovery-systems-lead/flight-simulation.png', caption: 'Simulated flight performance — altitude, velocity, and acceleration vs. time' },
+      { src: 'assets/images/recovery-systems-lead/bulkhead.png', caption: 'Optimized bulkhead design' }
+    ]
   },
   {
     id: 'reworld-mechanical-intern',
