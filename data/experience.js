@@ -89,7 +89,7 @@ const EXPERIENCES = [
     oneLiner: 'A nonprofit that designs and 3D-prints assistive devices on request.',
     summary: 'What started as a high school ITEEA REACH Challenge project turned into an ongoing nonprofit. Five of us design and 3D-print assistive devices for anyone who asks, and since every request is different, every design starts from scratch.',
     bullets: [
-      'Oversees the full design lifecycle: needs assessment, prototyping in Fusion 360, 3D printing, testing, and shipped delivery.',
+      'Oversaw the full design lifecycle: needs assessment, prototyping in Fusion 360, 3D printing, testing, and shipped delivery.',
       'Designed and delivered the Portion Plate, a custom adaptive plate built for a 4-year-old with an eating condition.',
       'Designed and delivered a Coin Calculator, an assistive device built for a 39-year-old man with Down syndrome.'
     ],
