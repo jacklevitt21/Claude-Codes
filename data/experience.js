@@ -64,7 +64,7 @@ const EXPERIENCES = [
     section: 'rocketry',
     dates: '', // TODO (Jack): what year(s)?
     location: '',
-    image: null,
+    image: 'assets/images/american-rocketry-challenge/launchpad.jpg',
     oneLiner: 'TODO (Jack): one sentence — this is where your rocketry background started, in high school.',
     // TODO (Jack): replace with the real story — your role on the team,
     // what you built, how you did in the competition.
