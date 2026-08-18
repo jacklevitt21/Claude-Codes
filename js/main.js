@@ -45,21 +45,6 @@ function makeZoomable(container) {
   });
 }
 
-// Same as makeZoomable, but for thumbnails inside <a class="project-card">
-// links — clicking the photo opens the lightbox instead of following the
-// link, while clicking anywhere else on the card still navigates normally.
-function makeCardThumbsZoomable(container) {
-  ensureLightbox();
-  container.querySelectorAll('.project-thumb img').forEach(img => {
-    img.classList.add('zoomable');
-    img.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      openLightbox(img.src, img.alt);
-    });
-  });
-}
-
 function projectCardHTML(exp, compact) {
   const noImageMsg = 'No image yet —<br>add one in data/experience.js';
   const thumb = exp.image
@@ -82,7 +67,6 @@ function renderProjectGrid(containerId, section) {
   if (!el) return;
   const items = section ? EXPERIENCES.filter(e => e.section === section) : EXPERIENCES;
   el.innerHTML = items.map(e => projectCardHTML(e)).join('');
-  makeCardThumbsZoomable(el);
 }
 
 function renderSkills(containerId) {

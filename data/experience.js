@@ -65,15 +65,14 @@ const EXPERIENCES = [
     dates: '', // TODO (Jack): what year(s)?
     location: '',
     image: 'assets/images/american-rocketry-challenge/launchpad.jpg',
-    oneLiner: 'TODO (Jack): one sentence — this is where your rocketry background started, in high school.',
-    // TODO (Jack): replace with the real story — your role on the team,
-    // what you built, how you did in the competition.
-    summary: 'TODO (Jack): describe your American Rocketry Challenge experience — your role, what the team built, and how it went.',
+    oneLiner: 'Designed and launched a competition rocket with a 4-person team — where my rocketry background started.',
+    summary: 'This is where my rocketry background started. As part of a 4-person team, I helped design, build, and launch a competition rocket — modeling the airframe in OpenRocket and running CFD simulations to predict how it would actually fly before we ever lit the motor.',
     bullets: [
-      // TODO (Jack): add 1-3 specifics — your role, design decisions,
-      // competition results/placement.
+      'Worked with a team of 4 to design, build, and launch a competition rocket for the American Rocketry Challenge.',
+      'Used OpenRocket to design the airframe and predict stability and flight performance.',
+      'Ran CFD simulations to model aerodynamic behavior and inform design decisions ahead of launch.'
     ],
-    tags: [], // TODO (Jack): e.g. ['Rocketry', 'Competition']
+    tags: ['OpenRocket', 'CFD', 'Team Project'], // TODO (Jack): add more if relevant
     gallery: [
       { src: 'assets/images/american-rocketry-challenge/rocket-1.mp4', caption: 'Launch 1' },
       { src: 'assets/images/american-rocketry-challenge/rocket-2.mp4', caption: 'Launch 2' }
