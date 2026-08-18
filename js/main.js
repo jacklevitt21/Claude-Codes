@@ -39,7 +39,8 @@ function renderSkills(containerId) {
   `).join('');
 }
 
-function renderProjectDetail(id) {
+function renderProjectDetail(id, basePath) {
+  basePath = basePath || '';
   const exp = EXPERIENCES.find(e => e.id === id);
   if (!exp) return;
 
@@ -48,7 +49,7 @@ function renderProjectDetail(id) {
   const heroNoImageMsg = "No hero image yet — set the image field in data/experience.js";
   const heroEl = document.getElementById('detail-hero');
   heroEl.innerHTML = exp.image
-    ? `<img src="${exp.image}" alt="${exp.title}" onerror="this.parentElement.innerHTML='<span class=&quot;no-image&quot;>${heroNoImageMsg}</span>';">`
+    ? `<img src="${basePath}${exp.image}" alt="${exp.title}" onerror="this.parentElement.innerHTML='<span class=&quot;no-image&quot;>${heroNoImageMsg}</span>';">`
     : `<span class="no-image">${heroNoImageMsg}</span>`;
 
   document.getElementById('detail-meta').textContent = `${exp.dates}${exp.location ? ' · ' + exp.location : ''}`;
@@ -71,7 +72,7 @@ function renderProjectDetail(id) {
   const galleryEl = document.getElementById('detail-gallery');
   if (exp.gallery && exp.gallery.length) {
     galleryEl.innerHTML = exp.gallery.map(g => `
-      <div class="gallery-item"><img src="${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}" onerror="this.parentElement.classList.add('gallery-empty'); this.parentElement.textContent='Image not found: ${g.src}';"></div>
+      <div class="gallery-item"><img src="${basePath}${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}" onerror="this.parentElement.classList.add('gallery-empty'); this.parentElement.textContent='Image not found: ${g.src}';"></div>
     `).join('');
   } else {
     galleryEl.innerHTML = `
