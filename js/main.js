@@ -5,9 +5,10 @@
    ========================================================================= */
 
 function projectCardHTML(exp, compact) {
+  const noImageMsg = 'No image yet —<br>add one in data/experience.js';
   const thumb = exp.image
-    ? `<img src="${exp.image}" alt="${exp.title}">`
-    : `<span class="no-image">No image yet —<br>add one in data/experience.js</span>`;
+    ? `<img src="${exp.image}" alt="${exp.title}" onerror="this.parentElement.innerHTML='<span class=&quot;no-image&quot;>${noImageMsg}</span>';">`
+    : `<span class="no-image">${noImageMsg}</span>`;
 
   return `
     <a class="project-card${compact ? ' compact' : ''}" href="projects/${exp.id}.html">
@@ -20,10 +21,10 @@ function projectCardHTML(exp, compact) {
   `;
 }
 
-function renderProjectGrid(containerId, ids) {
+function renderProjectGrid(containerId, section) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  const items = ids ? ids.map(id => EXPERIENCES.find(e => e.id === id)).filter(Boolean) : EXPERIENCES;
+  const items = section ? EXPERIENCES.filter(e => e.section === section) : EXPERIENCES;
   el.innerHTML = items.map(e => projectCardHTML(e)).join('');
 }
 
@@ -44,10 +45,11 @@ function renderProjectDetail(id) {
 
   document.title = `${exp.title} — Jack Levitt`;
 
+  const heroNoImageMsg = "No hero image yet — set the image field in data/experience.js";
   const heroEl = document.getElementById('detail-hero');
   heroEl.innerHTML = exp.image
-    ? `<img src="${exp.image}" alt="${exp.title}">`
-    : `<span class="no-image">No hero image yet — set "image" in data/experience.js</span>`;
+    ? `<img src="${exp.image}" alt="${exp.title}" onerror="this.parentElement.innerHTML='<span class=&quot;no-image&quot;>${heroNoImageMsg}</span>';">`
+    : `<span class="no-image">${heroNoImageMsg}</span>`;
 
   document.getElementById('detail-meta').textContent = `${exp.dates}${exp.location ? ' · ' + exp.location : ''}`;
   document.getElementById('detail-title').textContent = exp.title;
@@ -69,7 +71,7 @@ function renderProjectDetail(id) {
   const galleryEl = document.getElementById('detail-gallery');
   if (exp.gallery && exp.gallery.length) {
     galleryEl.innerHTML = exp.gallery.map(g => `
-      <div class="gallery-item"><img src="${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}"></div>
+      <div class="gallery-item"><img src="${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}" onerror="this.parentElement.classList.add('gallery-empty'); this.parentElement.textContent='Image not found: ${g.src}';"></div>
     `).join('');
   } else {
     galleryEl.innerHTML = `

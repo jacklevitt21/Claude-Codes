@@ -27,9 +27,9 @@
         </div>
       </div>
       <p class="lede">
-        I design and build hardware — rocket recovery systems, plant equipment
-        drawings, assistive devices. Below is a selection of engineering
-        projects; my full background is on my resume.
+        I design and build hardware — rocket recovery systems and personal
+        engineering projects. My full background, including internships and
+        research, is on my resume.
       </p>
       <div class="hero-actions">
         <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">Resume</a>
@@ -39,10 +39,17 @@
     </div>
   </section>
 
+  <section class="section" style="padding-top:32px;padding-bottom:32px;">
+    <div class="container">
+      <span class="label">Rocketry</span>
+      <div class="project-grid" id="rocketry-grid"></div>
+    </div>
+  </section>
+
   <section class="section" style="padding-top:32px;">
     <div class="container">
-      <span class="label">Selected Work</span>
-      <div class="project-grid" id="project-grid"></div>
+      <span class="label">Personal Projects</span>
+      <div class="project-grid" id="personal-grid"></div>
     </div>
   </section>
 </main>
@@ -55,7 +62,8 @@
 <script src="js/main.js"></script>
 <script>
   mountSiteChrome('index');
-  renderProjectGrid('project-grid');
+  renderProjectGrid('rocketry-grid', 'rocketry');
+  renderProjectGrid('personal-grid', 'personal');
 </script>
 </body>
 </html>

@@ -6,7 +6,7 @@ step, no framework — open `index.html` in a browser, or push to GitHub Pages.
 ## Structure
 
 ```
-index.html            Home — hero + the full project grid
+index.html            Home / Projects — hero + Rocketry section + Personal Projects section
 about.html             About page (bio, education)
 skills.html            Skills, grouped by category
 contact.html           Contact links
@@ -18,16 +18,17 @@ data/skills.js          ← EDIT THIS to add/change skills
 projects/               One detail page per project (photos/design files live here)
   _template.html         Copy this to add a new project's detail page
   recovery-systems-lead.html
-  reworld-mechanical-intern.html
-  orbis-metallicum.html
-  rabitz-lab.html
   empowered-innovations.html
+  puzzle-piece.html
 
 css/style.css            All styling. Colors/fonts are CSS variables at the top.
 js/components.js         Shared header/footer + your email/resume link
 js/main.js               Renders data files into HTML on each page
 assets/images/           Real photos and per-project design files go here
 ```
+
+Each project in `data/experience.js` has a `section` field — `'rocketry'` or
+`'personal'` — that controls which section of the homepage it appears in.
 
 ## The most common edits
 
@@ -71,10 +72,11 @@ rename it.
 
 ## Why some things aren't on this site
 
-This site is meant to showcase engineering projects with visuals — not
-duplicate your resume. Leadership roles, non-engineering activities, and
-older research aren't listed here; they're on `resume.pdf`, which is linked
-from every page.
+This site is meant to showcase Rocketry and Personal Projects with visuals —
+not duplicate your resume. Internships (Reworld, Orbis-Metallicum), research
+(Rabitz Lab), leadership roles, and other activities aren't listed here as
+project cards; they're on `resume.pdf`, which is linked from every page, and
+mentioned briefly in prose on the About page.
 
 ## Publishing it
 

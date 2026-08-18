@@ -24,7 +24,7 @@ function headerHTML(basePath) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div class="nav-links" id="nav-links">
-        <a href="${basePath}index.html" data-page="index">Work</a>
+        <a href="${basePath}index.html" data-page="index">Projects</a>
         <a href="${basePath}about.html" data-page="about">About</a>
         <a href="${basePath}skills.html" data-page="skills">Skills</a>
         <a href="${basePath}contact.html" data-page="contact">Contact</a>
