@@ -6,7 +6,7 @@
 <title>Contact — Jack Levitt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,55 +14,31 @@
 <header class="site-header" id="site-header"></header>
 
 <main>
-  <section class="section" style="padding-top:56px;">
+  <section class="section" style="padding-top:48px;">
     <div class="container">
-      <span class="eyebrow">Get in Touch</span>
-      <h2 style="font-size:2.2rem;max-width:18ch;">Let's talk.</h2>
-      <p style="max-width:56ch;margin-bottom:8px;">
-        Reach out about internships, research collaboration, or anything else.
-      </p>
-      <div class="contact-grid" style="margin-top:32px;">
-        <a href="mailto:levittj11127@gmail.com" class="contact-card">
-          <div class="card-icon" id="icon-mail"></div>
-          <div>
-            <h4 style="margin-bottom:2px;">Email</h4>
-            <p style="margin-bottom:0;">levittj11127@gmail.com</p>
-          </div>
-        </a>
-        <a href="mailto:jl0632@princeton.edu" class="contact-card">
-          <div class="card-icon" id="icon-mail-school"></div>
-          <div>
-            <h4 style="margin-bottom:2px;">Princeton Email</h4>
-            <p style="margin-bottom:0;">jl0632@princeton.edu</p>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/jack-levitt/" target="_blank" rel="noopener" class="contact-card">
-          <div class="card-icon" id="icon-linkedin"></div>
-          <div>
-            <h4 style="margin-bottom:2px;">LinkedIn</h4>
-            <p style="margin-bottom:0;">linkedin.com/in/jack-levitt</p>
-          </div>
-        </a>
-        <a href="resume.pdf" target="_blank" rel="noopener" class="contact-card">
-          <div class="card-icon" id="icon-doc"></div>
-          <div>
-            <h4 style="margin-bottom:2px;">Resume</h4>
-            <p style="margin-bottom:0;">Download PDF</p>
-          </div>
-        </a>
-        <a href="tel:+15163062322" class="contact-card">
-          <div class="card-icon" id="icon-phone"></div>
-          <div>
-            <h4 style="margin-bottom:2px;">Phone</h4>
-            <p style="margin-bottom:0;">(516) 306-2322</p>
-          </div>
-        </a>
-        <div class="contact-card">
-          <div class="card-icon" id="icon-pin"></div>
-          <div>
-            <h4 style="margin-bottom:2px;">Location</h4>
-            <p style="margin-bottom:0;">Princeton, NJ</p>
-          </div>
+      <span class="label">Contact</span>
+      <h2 style="margin-bottom:32px;">Let's talk.</h2>
+
+      <div class="contact-list">
+        <div class="contact-row">
+          <span class="label-inline">Email</span>
+          <a class="value text-link" href="mailto:levittj11127@gmail.com">levittj11127@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="label-inline">Princeton Email</span>
+          <a class="value text-link" href="mailto:jl0632@princeton.edu">jl0632@princeton.edu</a>
+        </div>
+        <div class="contact-row">
+          <span class="label-inline">Phone</span>
+          <a class="value text-link" href="tel:+15163062322">(516) 306-2322</a>
+        </div>
+        <div class="contact-row">
+          <span class="label-inline">LinkedIn</span>
+          <a class="value text-link" href="https://www.linkedin.com/in/jack-levitt/" target="_blank" rel="noopener">linkedin.com/in/jack-levitt</a>
+        </div>
+        <div class="contact-row">
+          <span class="label-inline">Resume</span>
+          <a class="value text-link" href="resume.pdf" target="_blank" rel="noopener">Download PDF</a>
         </div>
       </div>
     </div>
@@ -71,19 +47,12 @@
 
 <footer class="site-footer" id="site-footer"></footer>
 
-<script src="js/icons.js"></script>
 <script src="data/experience.js"></script>
 <script src="data/skills.js"></script>
 <script src="js/components.js"></script>
 <script src="js/main.js"></script>
 <script>
   mountSiteChrome('contact');
-  document.getElementById('icon-linkedin').innerHTML = ICONS.linkedin;
-  document.getElementById('icon-doc').innerHTML = ICONS.doc;
-  document.getElementById('icon-pin').innerHTML = ICONS.pin;
-  document.getElementById('icon-mail').innerHTML = ICONS.mail;
-  document.getElementById('icon-mail-school').innerHTML = ICONS.mail;
-  document.getElementById('icon-phone').innerHTML = ICONS.phone;
 </script>
 </body>
 </html>

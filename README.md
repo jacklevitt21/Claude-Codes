@@ -1,69 +1,87 @@
 # Jack Levitt — Portfolio Site
 
-A plain HTML/CSS/JS portfolio site. No build step, no framework, no `npm install` —
-just open `index.html` in a browser, or push to GitHub Pages.
+A plain HTML/CSS/JS portfolio site focused on engineering projects. No build
+step, no framework — open `index.html` in a browser, or push to GitHub Pages.
 
 ## Structure
 
 ```
-index.html          Home page (hero + featured projects)
-about.html           About page (bio, education)
-projects.html        Full project grid + leadership/activities list
-skills.html          Skills, grouped by category
-contact.html         Contact links
+index.html            Home — hero + the full project grid
+about.html             About page (bio, education)
+skills.html            Skills, grouped by category
+contact.html           Contact links
+resume.pdf              Your resume (linked from the nav/footer/contact page)
 
-data/experience.js   ← EDIT THIS to add/change projects & experience
-data/skills.js       ← EDIT THIS to add/change skills
+data/experience.js     ← EDIT THIS to add/change projects
+data/skills.js          ← EDIT THIS to add/change skills
 
-css/style.css         All styling. Colors/fonts are CSS variables at the top.
-js/components.js      Shared header/footer + your email/resume link
-js/main.js            Renders the data files into HTML on each page
-js/icons.js            Icon set used on cards
-assets/images/         Put real photos here
+projects/               One detail page per project (photos/design files live here)
+  _template.html         Copy this to add a new project's detail page
+  recovery-systems-lead.html
+  reworld-mechanical-intern.html
+  orbis-metallicum.html
+  rabitz-lab.html
+  empowered-innovations.html
+
+css/style.css            All styling. Colors/fonts are CSS variables at the top.
+js/components.js         Shared header/footer + your email/resume link
+js/main.js               Renders data files into HTML on each page
+assets/images/           Real photos and per-project design files go here
 ```
 
 ## The most common edits
 
-**Add a new project** → open `data/experience.js`, copy the template block at
-the bottom of the file, paste it into the `EXPERIENCES` array, fill in the
-fields, save, refresh your browser.
+**Add a photo or design file to an existing project** → drop the image in
+`assets/images/<project-id>/` (a folder already exists for each project),
+then add it to that project's `gallery` array in `data/experience.js`:
 
-**Reorder projects** → just reorder the objects in the `EXPERIENCES` array.
-The page layout updates automatically — you never touch HTML/CSS for this.
+```js
+gallery: [
+  { src: 'assets/images/recovery-systems-lead/bulkhead-cad.jpg', caption: 'Bulkhead CAD model' }
+]
+```
 
-**Add a skill** → open `data/skills.js`, add a string to the right category's
-`items` array.
+It'll show up in the "Photos & Design Files" section on that project's page.
+Leave `gallery: []` and the page just shows placeholder tiles as a reminder.
+
+**Add a brand new project**
+1. Copy an entry in `data/experience.js`'s `EXPERIENCES` array, give it a
+   unique `id`.
+2. Copy `projects/_template.html` to `projects/<your-id>.html` and replace
+   `REPLACE_WITH_ID` with your new id.
+3. Save, refresh — it appears on the homepage grid automatically and links
+   to its new detail page.
+
+**Reorder projects on the homepage** → reorder the objects in the
+`EXPERIENCES` array in `data/experience.js`.
+
+**Add a skill** → open `data/skills.js`, add a string to the right
+category's `items` array.
 
 **Change colors / fonts** → open `css/style.css`, edit the `:root { ... }`
-block at the very top.
+block at the top.
 
 **Change the nav links, footer, resume link, or contact email** → open
-`js/components.js`. Everything there is used on every page.
+`js/components.js`.
 
-**Add a real photo** → drop the image file into `assets/images/`, then either:
-- set `image: 'assets/images/yourfile.jpg'` on a project in `data/experience.js`, or
-- for your headshot: edit the `<div class="hero-portrait">` block in
-  `index.html` and the `<div class="about-photo">` block in `about.html`,
-  replacing the placeholder `<svg>` with `<img src="assets/images/headshot.jpg">`.
+**Replace your headshot** → it's `assets/images/headshot.jpeg`, used on
+the homepage and About page. Just overwrite that file with a new one
+(same filename), or update the `src` in `index.html` / `about.html` if you
+rename it.
 
-**Add your resume** → save it as `resume.pdf` in the project root (same folder
-as `index.html`). The "Resume" button in the nav and contact page already
-link to it.
+## Why some things aren't on this site
 
-## Things left as placeholders for you to fill in
-
-Search the codebase for `TODO (Jack)` to find every spot that needs your
-input — class year/major, real project bullet points for a few roles,
-your personal email, an "outside of engineering" blurb on the About page,
-and specific tool names on the Skills page (e.g. which CAD software you use).
+This site is meant to showcase engineering projects with visuals — not
+duplicate your resume. Leadership roles, non-engineering activities, and
+older research aren't listed here; they're on `resume.pdf`, which is linked
+from every page.
 
 ## Publishing it
 
-Easiest free option: **GitHub Pages**.
+**GitHub Pages** (free):
 1. Push this repo to GitHub (already done if you're reading this from there).
 2. Repo Settings → Pages → Deploy from branch → pick this branch, folder `/`.
-3. GitHub gives you a URL like `https://jacklevitt21.github.io/claude-codes/` —
+3. GitHub gives you a URL like `https://jacklevitt21.github.io/Claude-Codes/` —
    put that on your resume.
 
-You can also rename the repo, or set up a custom domain, from the same
-Pages settings screen.
+That URL updates automatically on every push to the branch it's configured to.

@@ -6,7 +6,7 @@
 <title>About — Jack Levitt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,19 +14,17 @@
 <header class="site-header" id="site-header"></header>
 
 <main>
-  <section class="section" style="padding-top:56px;">
+  <section class="section" style="padding-top:48px;">
     <div class="container">
-      <span class="eyebrow">About</span>
-      <h2 style="font-size:2.2rem;max-width:20ch;">Engineer, researcher, builder.</h2>
+      <span class="label">About</span>
 
-      <div class="about-grid" style="margin-top:40px;">
+      <div class="about-grid">
         <div>
           <div class="about-photo">
-            <img src="assets/images/headshot.jpeg" alt="Jack Levitt" id="about-photo-img" style="display:none;" onload="this.style.display='block'; document.getElementById('about-fallback').style.display='none';">
-            <svg id="about-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:96px;height:96px;color:var(--color-accent);"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+            <img src="assets/images/headshot.jpeg" alt="Jack Levitt" id="about-photo-img" style="display:none;" onload="this.style.display='block';">
           </div>
           <ul class="info-list">
-            <li><span>Based in</span><span>Princeton, NJ</span></li>
+            <li><span>Hometown</span><span>Bellmore, NY</span></li>
             <li><span>School</span><span>Princeton University</span></li>
             <li><span>Studying</span><span>Mechanical &amp; Aerospace Engineering</span></li>
             <li><span>Class of</span><span>2029</span></li>
@@ -36,44 +34,27 @@
 
         <div>
           <p style="font-size:1.05rem;color:var(--color-text);">
-            I'm an undergraduate at Princeton University who likes building things
-            that work in the real world — whether that's a rocket's recovery system,
-            an assistive device for someone who needs one, or a model that makes
-            sense of a messy dataset.
+            I'm a Mechanical &amp; Aerospace Engineering student at Princeton,
+            originally from Bellmore, NY. I like building things that work in
+            the real world — recovery systems for high-powered rockets, plant
+            equipment drawings, and assistive devices.
           </p>
           <p>
-            <!-- TODO (Jack): this paragraph is a placeholder — replace with your
-                 own story: how you got into engineering, what you're curious
-                 about, what you're looking for (internships, full-time roles,
-                 research collaborators, etc). -->
-            My work spans hands-on mechanical design, quantitative research, and
-            team leadership. On the engineering side, I lead recovery systems
-            development for Princeton Rocketry and founded Empowered Innovations,
-            a nonprofit that designs and 3D-prints assistive devices. On the
-            research side, I've worked on climate data analysis, materials and
-            battery-chemistry modeling, and biology research on neurodegeneration
-            in Drosophila melanogaster models. Outside of engineering, I direct
-            programming for a couple of Princeton student organizations and edit
-            for The Daily Princetonian.
+            Right now: recovery system design for Princeton Rocketry, cryogenic
+            spectroscopy research in the Rabitz Lab, and manufacturing/materials
+            work at Orbis-Metallicum. Project details and photos are on the
+            <a href="index.html" class="text-link">work</a> page.
           </p>
 
-          <h3 style="margin-top:40px;font-size:1.1rem;">What I'm working on</h3>
-          <p>
-            Right now: recovery system design for Princeton Rocketry, undergraduate
-            research at Princeton, and data analytics work on EV/battery materials
-            at Orbis-Metallicum.
-            <!-- TODO (Jack): update this as your current projects change. -->
-          </p>
-
-          <h3 style="margin-top:32px;font-size:1.1rem;">Beyond engineering</h3>
+          <h3 style="margin-top:36px;font-size:1.1rem;">Beyond engineering</h3>
           <p>
             I play on the club baseball team and I'm a huge Mets fan (LGM!).
             When I'm not in the lab or the shop, I'm probably hiking, at the
             gym, or just trying to be outside as much as possible.
           </p>
 
-          <div class="hero-actions" style="margin-top:32px;">
-            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+          <div class="hero-actions" style="margin-top:28px;">
+            <a href="index.html" class="btn btn-primary">View My Work</a>
             <a href="contact.html" class="btn btn-outline">Get in Touch</a>
           </div>
         </div>
@@ -84,7 +65,6 @@
 
 <footer class="site-footer" id="site-footer"></footer>
 
-<script src="js/icons.js"></script>
 <script src="data/experience.js"></script>
 <script src="data/skills.js"></script>
 <script src="js/components.js"></script>

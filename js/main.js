@@ -1,117 +1,81 @@
 /* =========================================================================
-   RENDER LOGIC — turns the data in data/experience.js and data/skills.js
-   into HTML on the page. You shouldn't need to edit this file to add
-   content — edit the data files instead. Only touch this if you want to
-   change *how* cards look/behave.
+   RENDER LOGIC — turns data/experience.js and data/skills.js into HTML.
+   You shouldn't need to edit this file to add content — edit the data
+   files instead. Only touch this if you want to change *how* things look.
    ========================================================================= */
 
-function cardHTML(exp) {
-  const bulletsHTML = (exp.bullets && exp.bullets.length)
-    ? `<ul class="bullets">${exp.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
-    : '';
-  const media = exp.image
-    ? `<div class="card-icon"><img src="${exp.image}" alt="${exp.title}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>`
-    : `<div class="card-icon">${ICONS[exp.icon] || ICONS.gear}</div>`;
-  const subtitle = exp.subtitle ? `<p style="font-style:italic;">${exp.subtitle}</p>` : '';
-  const loc = exp.location ? ` · ${exp.location}` : '';
+function projectCardHTML(exp, compact) {
+  const thumb = exp.image
+    ? `<img src="${exp.image}" alt="${exp.title}">`
+    : `<span class="no-image">No image yet —<br>add one in data/experience.js</span>`;
 
   return `
-    <article class="card">
-      ${media}
-      <span class="card-category ${exp.category}">${exp.category}</span>
+    <a class="project-card${compact ? ' compact' : ''}" href="projects/${exp.id}.html">
+      <div class="project-thumb">${thumb}</div>
       <h3>${exp.title}</h3>
-      <div class="card-org">${exp.org}</div>
-      <div class="card-dates">${exp.dates}${loc}</div>
-      <p>${exp.summary}</p>
-      ${subtitle}
-      ${bulletsHTML}
-      <div class="card-tags">${(exp.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</div>
-    </article>
+      <div class="project-org">${exp.org}</div>
+      <div class="project-dates">${exp.dates}</div>
+      <p class="project-caption">${exp.oneLiner}</p>
+    </a>
   `;
 }
 
-function placeholderCardHTML() {
-  return `
-    <article class="card placeholder-card">
-      <div class="plus">${ICONS.plus}</div>
-      <strong>Add your next project</strong>
-      <span style="font-size:0.82rem;margin-top:4px;">Copy the template at the bottom of data/experience.js</span>
-    </article>
-  `;
-}
-
-function renderFeatured(containerId, count = 3) {
+function renderProjectGrid(containerId, ids) {
   const el = document.getElementById(containerId);
   if (!el) return;
-  const items = EXPERIENCES.filter(e => e.featured).slice(0, count);
-  el.innerHTML = items.map(cardHTML).join('');
-}
-
-function renderProjectGrid(containerId, category) {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  const items = category === 'all'
-    ? EXPERIENCES.filter(e => e.category !== 'leadership')
-    : EXPERIENCES.filter(e => e.category === category);
-  el.innerHTML = items.map(cardHTML).join('') + placeholderCardHTML();
-}
-
-function renderLeadershipRows(containerId) {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  const items = EXPERIENCES.filter(e => e.category === 'leadership');
-  el.innerHTML = items.map(exp => `
-    <div class="exp-row">
-      <div class="exp-row-dates">${exp.dates}</div>
-      <div>
-        <h4>${exp.title}</h4>
-        <div class="exp-row-org">${exp.org}</div>
-        <p>${exp.summary}</p>
-      </div>
-    </div>
-  `).join('');
-}
-
-function setupProjectFilters() {
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderProjectGrid('project-grid', btn.dataset.filter);
-    });
-  });
+  const items = ids ? ids.map(id => EXPERIENCES.find(e => e.id === id)).filter(Boolean) : EXPERIENCES;
+  el.innerHTML = items.map(e => projectCardHTML(e)).join('');
 }
 
 function renderSkills(containerId) {
   const el = document.getElementById(containerId);
   if (!el) return;
   el.innerHTML = SKILL_GROUPS.map(group => `
-    <div class="skill-card">
-      <h3><span class="card-icon">${ICONS[group.icon] || ICONS.gear}</span>${group.title}</h3>
-      <div class="skill-pills">
-        ${group.items.map(s => `<span class="skill-pill">${s}</span>`).join('')}
-      </div>
+    <div class="skill-group">
+      <div class="skill-group-title">${group.title}</div>
+      <div class="skill-group-items">${group.items.join(' · ')}</div>
     </div>
   `).join('');
 }
 
-function renderStats(containerId) {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  const engineering = EXPERIENCES.filter(e => e.category === 'engineering').length;
-  const research = EXPERIENCES.filter(e => e.category === 'research').length;
-  const leadership = EXPERIENCES.filter(e => e.category === 'leadership').length;
-  const stats = [
-    { num: String(engineering), label: 'Engineering Roles' },
-    { num: String(research), label: 'Research Projects' },
-    { num: String(leadership), label: 'Leadership Roles' },
-    { num: '4+', label: 'Years Active' }
-  ];
-  el.innerHTML = stats.map(s => `
-    <div>
-      <div class="stat-num">${s.num}</div>
-      <div class="stat-label">${s.label}</div>
-    </div>
-  `).join('');
+function renderProjectDetail(id) {
+  const exp = EXPERIENCES.find(e => e.id === id);
+  if (!exp) return;
+
+  document.title = `${exp.title} — Jack Levitt`;
+
+  const heroEl = document.getElementById('detail-hero');
+  heroEl.innerHTML = exp.image
+    ? `<img src="${exp.image}" alt="${exp.title}">`
+    : `<span class="no-image">No hero image yet — set "image" in data/experience.js</span>`;
+
+  document.getElementById('detail-meta').textContent = `${exp.dates}${exp.location ? ' · ' + exp.location : ''}`;
+  document.getElementById('detail-title').textContent = exp.title;
+  document.getElementById('detail-org').textContent = exp.org;
+  document.getElementById('detail-summary').textContent = exp.summary;
+
+  const subtitleEl = document.getElementById('detail-subtitle');
+  if (exp.subtitle) {
+    subtitleEl.textContent = exp.subtitle;
+    subtitleEl.style.display = 'block';
+  }
+
+  document.getElementById('detail-bullets').innerHTML =
+    (exp.bullets || []).map(b => `<li>${b}</li>`).join('');
+
+  document.getElementById('detail-tags').innerHTML =
+    (exp.tags || []).map(t => `<span>${t}</span>`).join('');
+
+  const galleryEl = document.getElementById('detail-gallery');
+  if (exp.gallery && exp.gallery.length) {
+    galleryEl.innerHTML = exp.gallery.map(g => `
+      <div class="gallery-item"><img src="${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}"></div>
+    `).join('');
+  } else {
+    galleryEl.innerHTML = `
+      <div class="gallery-item gallery-empty">Add photos or design files here — list them in this project's "gallery" array in data/experience.js</div>
+      <div class="gallery-item gallery-empty">&nbsp;</div>
+      <div class="gallery-item gallery-empty">&nbsp;</div>
+    `;
+  }
 }

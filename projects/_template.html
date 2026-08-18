@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project — Jack Levitt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+      <a href="../index.html" class="detail-back">← Back to work</a>
+
+      <div class="detail-hero-image" id="detail-hero"></div>
+
+      <div class="detail-header">
+        <div class="detail-meta" id="detail-meta"></div>
+        <h1 id="detail-title"></h1>
+        <div class="detail-org" id="detail-org"></div>
+      </div>
+
+      <div class="detail-body">
+        <p id="detail-summary"></p>
+        <p id="detail-subtitle" style="font-style:italic;display:none;"></p>
+        <ul class="bullets" id="detail-bullets"></ul>
+        <div class="detail-tags" id="detail-tags"></div>
+      </div>
+
+      <div class="section-header" style="margin-top:56px;">
+        <span class="label">Photos &amp; Design Files</span>
+      </div>
+      <div class="gallery-grid" id="detail-gallery"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="../data/experience.js"></script>
+<script src="../data/skills.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  mountSiteChrome(null, '../');
+  renderProjectDetail('REPLACE_WITH_ID');
+</script>
+</body>
+</html>
