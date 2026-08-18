@@ -6,31 +6,36 @@
 
 const SKILL_GROUPS = [
   {
-    title: 'Engineering & Design',
+    title: 'Analysis & Design',
     icon: 'gear',
     items: [
-      'CAD Software', // TODO (Jack): name your specific tool(s), e.g. SolidWorks, Fusion 360, Onshape
-      '3D Printing & Rapid Prototyping',
-      'Mechanical Systems Design',
-      'Recovery / Aerospace Systems',
-      'Design for Manufacturing'
+      'Computational Fluid Dynamics (CFD)',
+      'CAD Modeling',
+      'Structural Analysis',
+      'Manufacturing Design',
+      'Systems Engineering'
     ]
   },
   {
-    title: 'Programming & Data',
+    title: 'Engineering Software',
     icon: 'code',
     items: [
+      'MATLAB',
       'Python',
-      'Statistical Analysis & Regression Modeling',
-      'Data Visualization (Matplotlib, Seaborn)',
-      'Anomaly Detection',
-      'Quantitative Modeling'
+      'C++',
+      'SolidWorks',
+      'PTC Creo',
+      'Autodesk Fusion 360',
+      'AutoCAD',
+      'OpenRocket',
+      'LaTeX'
     ]
   },
   {
     title: 'Research & Lab',
     icon: 'flask',
     items: [
+      'Cryogenic Infrared Spectroscopy',
       'Experimental Design',
       'PCR & DNA Sequencing',
       'Scientific Research & Methodology',
@@ -47,6 +52,15 @@ const SKILL_GROUPS = [
       'Investment Analysis',
       'Editorial / Copy Editing',
       'Teaching & Mentorship'
+    ]
+  },
+  {
+    title: 'Additional',
+    icon: 'doc',
+    items: [
+      'Microsoft Suite',
+      'Spanish (Intermediate)',
+      'NYS Seal of Biliteracy'
     ]
   }
 ];

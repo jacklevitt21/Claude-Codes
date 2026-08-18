@@ -38,12 +38,13 @@ const EXPERIENCES = [
     location: 'Princeton, NJ',
     icon: 'rocket',
     image: null,
-    summary: "Leads design, testing, and manufacturing of recovery systems — parachutes, deployment hardware, and avionics — that bring the team's competition rockets back down safely.",
+    summary: 'Leads recovery systems engineering for 30,000-ft high-powered rockets — parachute deployment mechanisms, aerodynamic analysis, and structural hardware.',
     bullets: [
-      // TODO (Jack): add 2-3 specifics — e.g. a design you built, a test
-      // campaign you ran, a competition result, team size you lead, etc.
+      'Led recovery systems engineering for 30,000-ft high-powered rockets, developing parachute deployment mechanisms and conducting ground testing to validate mission-critical flight hardware.',
+      'Performed CFD simulations of rocket geometries to evaluate airflow behavior, aerodynamic stability, and performance impacts across flight regimes.',
+      'Designed, fabricated, and validated optimized bulkhead structures using CAD and manufacturing processes, improving structural performance while optimizing subsystem mass.'
     ],
-    tags: ['CAD', 'Systems Engineering', 'Testing', 'Rocketry'],
+    tags: ['CAD', 'CFD', 'Systems Engineering', 'Rocketry'],
     links: {}
   },
   {
@@ -67,7 +68,7 @@ const EXPERIENCES = [
   },
   {
     id: 'reworld-mechanical-intern',
-    title: 'Mechanical Engineering Intern',
+    title: 'Mechanical/Operations Engineering Intern',
     org: 'Reworld',
     category: 'engineering',
     featured: false,
@@ -75,16 +76,18 @@ const EXPERIENCES = [
     location: '',
     icon: 'gear',
     image: null,
-    summary: 'Mechanical engineering internship supporting waste-to-energy operations.',
+    summary: 'Performed plant-wide structural analysis and produced engineering drawings and documentation for a waste-to-energy facility.',
     bullets: [
-      // TODO (Jack): add specifics — what system/project did you work on?
+      'Performed and authored a plant-wide structural analysis across 50+ mechanical systems, evaluating load paths, support conditions, and equipment integrity to identify areas requiring engineering review and improve maintenance planning.',
+      'Developed and revised P&IDs and CAD models for plant equipment and utility systems, producing accurate engineering drawings that supported communication between operations, maintenance, and external vendors.',
+      'Developed technical engineering documentation detailing component mechanics, failure modes, and maintenance principles of critical plant equipment to improve operator understanding of system functionality.'
     ],
-    tags: ['Mechanical Engineering', 'Industrial Systems'],
+    tags: ['Structural Analysis', 'CAD', 'P&IDs', 'Industrial Systems'],
     links: {}
   },
   {
     id: 'orbis-metallicum-data-analytics',
-    title: 'Data Analytics Intern',
+    title: 'Manufacturing Systems Engineering Intern',
     org: 'Orbis-Metallicum LLC',
     category: 'engineering',
     featured: true,
@@ -92,11 +95,11 @@ const EXPERIENCES = [
     location: '',
     icon: 'chart',
     image: null,
-    summary: 'Builds quantitative models of global EV aluminum gigacasting and automotive battery chemistries to support industry benchmarking.',
+    summary: 'Builds a global EV gigacasting manufacturing database and evaluates next-generation conductor materials and battery chemistries.',
     bullets: [
-      'Built and maintains a dataset analyzing global EV aluminum gigacasting, integrating OEM data, machine specifications, casting entities, and part weights.',
-      'Designed quantitative estimation frameworks to infer production volumes and material usage, improving industry benchmarking accuracy.',
-      'Developed first-principles models of automotive battery chemistries, analyzing material composition and manufacturing tradeoffs to evaluate future technology adoption.'
+      'Built and optimized a global manufacturing database of EV gigacasting, integrating casting architecture, machine tonnage, and component-level design specifications across 12 OEMs and 40+ facilities, comprising 2,000+ data points.',
+      'Evaluated graphene and graphene-doped aluminum/copper composites as next-generation electrical conductors, benchmarking theoretical thermal and electrical conductivity gains against incumbent materials to assess feasibility for weight-sensitive aerospace and high-power electronics applications.',
+      'Developed first-principles models of automotive battery chemistries, analyzing material composition, manufacturing processes, and electrochemical performance tradeoffs to evaluate future technology adoption.'
     ],
     tags: ['Data Analysis', 'Materials', 'Modeling', 'EV / Battery'],
     links: {}
@@ -106,19 +109,21 @@ const EXPERIENCES = [
   {
     id: 'princeton-research-assistant',
     title: 'Undergraduate Research Assistant',
-    org: 'Princeton University',
+    org: 'Princeton University — Rabitz Lab',
     category: 'research',
-    featured: false,
+    featured: true,
     dates: 'Aug 2026 – Present',
     location: 'Princeton, NJ',
     icon: 'flask',
     image: null,
-    summary: 'Working with PhD candidate Amr Sobeh under the direction of Dr. Herschel Rabitz and Dr. Martin Jonikas.',
+    summary: 'Collects cryogenic infrared spectra of biological molecules to support a novel microscopy instrument for mapping molecule distribution within cells.',
     bullets: [
-      // TODO (Jack): add specifics once you can share them — topic area,
-      // techniques used, any results.
+      'Collected and analyzed cryogenic infrared spectra of biological small molecules to generate high-quality reference datasets, directly supporting development of a novel microscopy instrument designed to map the spatial distribution of molecules within cells in their native state.',
+      'Performed spectroscopy experiments under cryogenic conditions, applying data processing and spectral analysis techniques to characterize biological molecules while ensuring reproducible, high-fidelity results.',
+      'Collaborated with faculty and research mentors to interpret infrared spectroscopy data and validate reference spectra, accelerating efforts to develop new methods for studying cellular metabolism and molecular organization.'
     ],
-    tags: ['Research'],
+    subtitle: 'Working with PhD candidate Amr Sobeh under the direction of Dr. Herschel Rabitz and Dr. Martin Jonikas.',
+    tags: ['Spectroscopy', 'Data Analysis', 'Research'],
     links: {}
   },
   {
@@ -126,7 +131,7 @@ const EXPERIENCES = [
     title: 'Software Engineer Intern',
     org: 'Cornell University',
     category: 'research',
-    featured: true,
+    featured: false,
     dates: 'Nov 2022 – Jul 2023',
     location: '',
     icon: 'chart',
@@ -189,9 +194,13 @@ const EXPERIENCES = [
     location: '',
     icon: 'users',
     image: null,
-    summary: "Directs event programming for Princeton Student Ventures, the university's student-run venture organization.",
-    bullets: [],
-    tags: ['Leadership', 'Events'],
+    summary: "Directs event programming for Princeton Student Ventures, the university's student-run venture organization, connecting founders, investors, and industry leaders.",
+    bullets: [
+      'Cultivated relationships with technical founders, venture capital investors, and industry leaders to accelerate the commercialization of emerging engineering and deep-tech innovations.',
+      'Analyzed emerging deep-tech industries and startup ecosystems to identify founders and technologies driving innovation across advanced manufacturing, robotics, aerospace, and energy.',
+      'Evaluated the technical feasibility and commercialization potential of emerging technologies by examining product development strategies, engineering challenges, and pathways from innovation to market adoption.'
+    ],
+    tags: ['Leadership', 'Events', 'Deep Tech'],
     links: {}
   },
   {

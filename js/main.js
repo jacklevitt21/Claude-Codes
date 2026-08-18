@@ -106,7 +106,7 @@ function renderStats(containerId) {
     { num: String(engineering), label: 'Engineering Roles' },
     { num: String(research), label: 'Research Projects' },
     { num: String(leadership), label: 'Leadership Roles' },
-    { num: '4+', label: 'Years Active' } // TODO (Jack): adjust if this isn't right
+    { num: '4+', label: 'Years Active' }
   ];
   el.innerHTML = stats.map(s => `
     <div>

@@ -16,6 +16,9 @@ const SITE_NAME = 'Jack Levitt';
 // the project root (e.g. resume.pdf).
 const RESUME_PATH = 'resume.pdf';
 
+const PERSONAL_EMAIL = 'levittj11127@gmail.com';
+const SCHOOL_EMAIL = 'jl0632@princeton.edu';
+
 const HEADER_HTML = `
   <div class="container nav">
     <a href="index.html" class="nav-logo">${SITE_NAME.split(' ')[0]} <span>${SITE_NAME.split(' ')[1] || ''}</span></a>
@@ -37,7 +40,7 @@ const FOOTER_HTML = `
   <div class="container footer-row">
     <span>&copy; ${new Date().getFullYear()} ${SITE_NAME}</span>
     <div class="footer-links">
-      <a href="mailto:you@example.com">Email</a>
+      <a href="mailto:${PERSONAL_EMAIL}">Email</a>
       <a href="https://www.linkedin.com/in/jack-levitt/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="${RESUME_PATH}" target="_blank" rel="noopener">Resume</a>
     </div>
