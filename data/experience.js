@@ -58,13 +58,36 @@ const EXPERIENCES = [
     ]
   },
   {
+    id: 'american-rocketry-challenge',
+    title: 'American Rocketry Challenge',
+    org: '', // TODO (Jack): your team/school name
+    section: 'rocketry',
+    dates: '', // TODO (Jack): what year(s)?
+    location: '',
+    image: null,
+    oneLiner: 'TODO (Jack): one sentence — this is where your rocketry background started, in high school.',
+    // TODO (Jack): replace with the real story — your role on the team,
+    // what you built, how you did in the competition.
+    summary: 'TODO (Jack): describe your American Rocketry Challenge experience — your role, what the team built, and how it went.',
+    bullets: [
+      // TODO (Jack): add 1-3 specifics — your role, design decisions,
+      // competition results/placement.
+    ],
+    tags: [], // TODO (Jack): e.g. ['Rocketry', 'Competition']
+    gallery: [
+      // Photos AND videos both work here — just list the video files
+      // the same way, e.g.:
+      // { src: 'assets/images/american-rocketry-challenge/launch.mp4', caption: 'Launch day' }
+    ]
+  },
+  {
     id: 'empowered-innovations',
     title: 'Founder',
     org: 'Empowered Innovations Inc.',
     section: 'personal',
     dates: 'Jan 2023 – Present',
     location: '',
-    image: null,
+    image: 'assets/images/empowered-innovations/plate.jpg',
     oneLiner: 'A nonprofit that designs and 3D-prints assistive devices on request.',
     summary: 'What started as a high school ITEEA REACH Challenge project turned into an ongoing nonprofit. Five of us design and 3D-print assistive devices for anyone who asks — every request is different, so every design starts from scratch.',
     bullets: [
@@ -73,26 +96,31 @@ const EXPERIENCES = [
       'Designed and delivered a Coin Calculator, an assistive device built for a 39-year-old man with Down syndrome.'
     ],
     tags: ['Fusion 360', '3D Printing', 'Nonprofit'],
-    gallery: []
+    gallery: [
+      { src: 'assets/images/empowered-innovations/plate.jpg', caption: 'The Portion Plate' },
+      { src: 'assets/images/empowered-innovations/coin-calc.jpg', caption: 'The Coin Calculator' }
+    ]
   },
   {
     id: 'puzzle-piece',
-    title: 'Puzzle Piece',
+    title: 'Collaborative Puzzle',
     org: 'Personal Project',
     section: 'personal',
-    dates: '', // TODO (Jack): add when you made this
+    dates: '', // TODO (Jack): what timeframe was this?
     location: '',
-    image: null,
-    oneLiner: 'TODO (Jack): one sentence describing what this is.',
-    // TODO (Jack): replace this placeholder with the real story — what
-    // problem were you solving, why a puzzle piece, what did you learn.
-    summary: 'TODO (Jack): describe this project — what it is, why you made it, and what was interesting or hard about designing it.',
+    image: 'assets/images/puzzle-piece/puzzle-1.png',
+    oneLiner: 'Four of us designed interlocking puzzle pieces independently, without seeing each other’s files, to see if they’d fit.',
+    summary: 'Real engineering teams design their piece of a system independently and trust it to fit with everyone else’s when it counts. I wanted to test that on a small scale: I designed the frame and one piece, then had three friends design the remaining pieces on their own, with no shared workflow and no checking in on each other’s files. We laser cut everything and assembled it for the first time in person — it fit.',
     bullets: [
-      // TODO (Jack): add 1-3 specifics — tools used (CAD software?),
-      // material, how it was made (3D printed? machined?), etc.
+      'Designed the frame and one interlocking piece, which set the shared boundary dimensions the other three pieces had to match.',
+      'Coordinated with 3 collaborators designing independently, then laser cut every piece from the finished files.',
+      'Assembled all four pieces together for the first time in person — everything fit on the first try.'
     ],
-    tags: [], // TODO (Jack): e.g. ['CAD', '3D Printing']
-    gallery: []
+    tags: ['CAD', 'Laser Cutting', 'Collaboration'],
+    gallery: [
+      { src: 'assets/images/puzzle-piece/puzzle-1.png', caption: 'Puzzle piece design' },
+      { src: 'assets/images/puzzle-piece/puzzle-2.png', caption: 'Puzzle piece design' }
+    ]
   }
 
   /* -----------------------------------------------------------------------

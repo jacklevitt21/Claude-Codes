@@ -52,9 +52,13 @@ function renderProjectDetail(id, basePath) {
     ? `<img src="${basePath}${exp.image}" alt="${exp.title}" onerror="this.parentElement.innerHTML='<span class=&quot;no-image&quot;>${heroNoImageMsg}</span>';">`
     : `<span class="no-image">${heroNoImageMsg}</span>`;
 
-  document.getElementById('detail-meta').textContent = `${exp.dates}${exp.location ? ' · ' + exp.location : ''}`;
+  const metaEl = document.getElementById('detail-meta');
+  const metaText = `${exp.dates || ''}${exp.location ? ' · ' + exp.location : ''}`;
+  metaEl.textContent = metaText;
+  metaEl.style.display = metaText ? 'block' : 'none';
   document.getElementById('detail-title').textContent = exp.title;
   document.getElementById('detail-org').textContent = exp.org;
+  document.getElementById('detail-org').style.display = exp.org ? 'block' : 'none';
   document.getElementById('detail-summary').textContent = exp.summary;
 
   const subtitleEl = document.getElementById('detail-subtitle');
@@ -69,11 +73,17 @@ function renderProjectDetail(id, basePath) {
   document.getElementById('detail-tags').innerHTML =
     (exp.tags || []).map(t => `<span>${t}</span>`).join('');
 
+  const videoExtensions = ['.mp4', '.mov', '.webm', '.m4v'];
+  const isVideo = src => videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
+
   const galleryEl = document.getElementById('detail-gallery');
   if (exp.gallery && exp.gallery.length) {
-    galleryEl.innerHTML = exp.gallery.map(g => `
-      <div class="gallery-item"><img src="${basePath}${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}" onerror="this.parentElement.classList.add('gallery-empty'); this.parentElement.textContent='Image not found: ${g.src}';"></div>
-    `).join('');
+    galleryEl.innerHTML = exp.gallery.map(g => {
+      const media = isVideo(g.src)
+        ? `<video src="${basePath}${g.src}" title="${g.caption || ''}" controls onerror="this.parentElement.classList.add('gallery-empty'); this.parentElement.textContent='Video not found: ${g.src}';"></video>`
+        : `<img src="${basePath}${g.src}" alt="${g.caption || exp.title}" title="${g.caption || ''}" onerror="this.parentElement.classList.add('gallery-empty'); this.parentElement.textContent='Image not found: ${g.src}';">`;
+      return `<div class="gallery-item">${media}</div>`;
+    }).join('');
   } else {
     galleryEl.innerHTML = `
       <div class="gallery-item gallery-empty">Add photos or design files here — list them in this project's "gallery" array in data/experience.js</div>

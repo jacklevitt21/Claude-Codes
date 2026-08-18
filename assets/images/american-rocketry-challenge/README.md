@@ -1,0 +1,1 @@
+Drop photos or videos for the American Rocketry Challenge project here, then reference them in this project's "gallery" array in data/experience.js. Videos work the same as photos — just list the video file.
