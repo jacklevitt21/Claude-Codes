@@ -22,12 +22,13 @@
       <div class="about-grid" style="margin-top:40px;">
         <div>
           <div class="about-photo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:96px;height:96px;color:var(--color-accent);"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+            <img src="assets/images/headshot.jpg" alt="Jack Levitt" id="about-photo-img" style="display:none;" onload="this.style.display='block'; document.getElementById('about-fallback').style.display='none'; document.getElementById('about-note').style.display='none';">
+            <svg id="about-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="width:96px;height:96px;color:var(--color-accent);"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
           </div>
-          <p class="editable-note" style="margin-top:16px;">
-            Replace the icon above with a real headshot: save it to
-            assets/images/headshot.jpg and swap the &lt;svg&gt; block for
-            &lt;img src="assets/images/headshot.jpg"&gt;.
+          <p class="editable-note" style="margin-top:16px;" id="about-note">
+            No headshot found yet — drop one at assets/images/headshot.jpg
+            (via the GitHub web UI or a local commit) and it'll appear here
+            automatically, no code changes needed.
           </p>
           <ul class="info-list">
             <li><span>Based in</span><span>Princeton, NJ</span></li>
