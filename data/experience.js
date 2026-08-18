@@ -57,13 +57,13 @@ const EXPERIENCES = [
     location: '',
     icon: 'heart',
     image: null,
-    summary: 'Founded a nonprofit that designs and manufactures assistive devices for individuals with disabilities.',
+    summary: 'Co-founded a nonprofit — with 4 fellow high school seniors as ITEEA REACH Challenge semifinalists — that designs and 3D-prints affordable assistive devices on request.',
     bullets: [
-      'Oversees the full design lifecycle — needs assessment, prototyping, and final delivery — using 3D printing and CAD software.',
-      // TODO (Jack): add a specific device you designed, who it helped,
-      // or a photo of a finished build in assets/images/.
+      'Oversees the full design lifecycle — needs assessment, prototyping in Fusion 360, 3D printing, testing, and shipped delivery — aiming to keep pricing as affordable as possible.',
+      'Designed and delivered the Portion Plate, a custom adaptive plate built for Londyn, a 4-year-old with an eating condition.',
+      'Designed and delivered a Coin Calculator, an assistive device built for Matt, a 39-year-old man with Down syndrome.'
     ],
-    tags: ['CAD', '3D Printing', 'Assistive Tech', 'Nonprofit'],
+    tags: ['Fusion 360', '3D Printing', 'Assistive Tech', 'Nonprofit'],
     links: {}
   },
   {
