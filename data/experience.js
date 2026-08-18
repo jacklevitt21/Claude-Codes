@@ -44,7 +44,7 @@ const EXPERIENCES = [
     location: 'Princeton, NJ',
     image: 'assets/images/recovery-systems-lead/openrocket-model.png',
     oneLiner: 'Parachute recovery systems and flight simulation for 30,000-ft high-powered rockets.',
-    summary: 'High-powered rockets are usually lost during recovery, not ascent — a parachute that deploys wrong turns a season of work into scrap. I lead the systems that bring ours back intact: modeling flight performance before we ever leave the ground, then designing and fabricating the structural hardware that has to survive the trip.',
+    summary: 'High-powered rockets are usually lost during recovery, not ascent. A parachute that deploys wrong turns a season of work into scrap, so I lead the systems that bring ours back intact, modeling flight performance before we ever leave the ground and then designing the structural hardware that has to survive the trip.',
     bullets: [
       'Led recovery systems engineering for 30,000-ft high-powered rockets, developing parachute deployment mechanisms and conducting ground testing to validate mission-critical flight hardware.',
       'Performed CFD simulations of rocket geometries to evaluate airflow behavior, aerodynamic stability, and performance impacts across flight regimes.',
@@ -53,7 +53,7 @@ const EXPERIENCES = [
     tags: ['CAD', 'CFD', 'OpenRocket', 'Manufacturing'],
     gallery: [
       { src: 'assets/images/recovery-systems-lead/openrocket-model.png', caption: 'Rocket model in OpenRocket' },
-      { src: 'assets/images/recovery-systems-lead/flight-simulation.png', caption: 'Simulated flight performance — altitude, velocity, and acceleration vs. time' },
+      { src: 'assets/images/recovery-systems-lead/flight-simulation.png', caption: 'Simulated flight performance: altitude, velocity, and acceleration vs. time' },
       { src: 'assets/images/recovery-systems-lead/bulkhead.png', caption: 'Optimized bulkhead design' }
     ]
   },
@@ -65,8 +65,8 @@ const EXPERIENCES = [
     dates: '', // TODO (Jack): what year(s)?
     location: '',
     image: 'assets/images/american-rocketry-challenge/launchpad.jpg',
-    oneLiner: 'Designed and launched a competition rocket with a 4-person team — where my rocketry background started.',
-    summary: 'This is where my rocketry background started. As part of a 4-person team, I helped design, build, and launch a competition rocket — modeling the airframe in OpenRocket and running CFD simulations to predict how it would actually fly before we ever lit the motor.',
+    oneLiner: 'Designed and launched a competition rocket with a 4-person team, the start of my rocketry background.',
+    summary: 'This is where my rocketry background started. As part of a 4-person team, I helped design, build, and launch a competition rocket, modeling the airframe in OpenRocket and running CFD simulations to predict how it would actually fly before we ever lit the motor.',
     bullets: [
       'Worked with a team of 4 to design, build, and launch a competition rocket for the American Rocketry Challenge.',
       'Used OpenRocket to design the airframe and predict stability and flight performance.',
@@ -87,9 +87,9 @@ const EXPERIENCES = [
     location: '',
     image: 'assets/images/empowered-innovations/coin-calc.jpg',
     oneLiner: 'A nonprofit that designs and 3D-prints assistive devices on request.',
-    summary: 'What started as a high school ITEEA REACH Challenge project turned into an ongoing nonprofit. Five of us design and 3D-print assistive devices for anyone who asks — every request is different, so every design starts from scratch.',
+    summary: 'What started as a high school ITEEA REACH Challenge project turned into an ongoing nonprofit. Five of us design and 3D-print assistive devices for anyone who asks, and since every request is different, every design starts from scratch.',
     bullets: [
-      'Oversees the full design lifecycle — needs assessment, prototyping in Fusion 360, 3D printing, testing, and shipped delivery.',
+      'Oversees the full design lifecycle: needs assessment, prototyping in Fusion 360, 3D printing, testing, and shipped delivery.',
       'Designed and delivered the Portion Plate, a custom adaptive plate built for a 4-year-old with an eating condition.',
       'Designed and delivered a Coin Calculator, an assistive device built for a 39-year-old man with Down syndrome.'
     ],
@@ -108,11 +108,11 @@ const EXPERIENCES = [
     location: '',
     image: 'assets/images/puzzle-piece/puzzle-1.png',
     oneLiner: 'Four of us designed interlocking puzzle pieces independently, without seeing each other’s files, to see if they’d fit.',
-    summary: 'Real engineering teams design their piece of a system independently and trust it to fit with everyone else’s when it counts. I wanted to test that on a small scale: I designed the frame and one piece, then had three friends design the remaining pieces on their own, with no shared workflow and no checking in on each other’s files. We laser cut everything and assembled it for the first time in person — it fit.',
+    summary: 'Real engineering teams design their piece of a system independently and trust it to fit with everyone else’s when it counts. I wanted to test that on a small scale: I designed the frame and one piece, then had three friends design the remaining pieces on their own, with no shared workflow and no checking in on each other’s files. We laser cut everything and assembled it for the first time in person. It fit.',
     bullets: [
       'Designed the frame and one interlocking piece, which set the shared boundary dimensions the other three pieces had to match.',
       'Coordinated with 3 collaborators designing independently, then laser cut every piece from the finished files.',
-      'Assembled all four pieces together for the first time in person — everything fit on the first try.'
+      'Assembled all four pieces together for the first time in person, and everything fit on the first try.'
     ],
     tags: ['CAD', 'Laser Cutting', 'Collaboration'],
     gallery: [
