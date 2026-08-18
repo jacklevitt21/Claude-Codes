@@ -75,9 +75,8 @@ const EXPERIENCES = [
     ],
     tags: [], // TODO (Jack): e.g. ['Rocketry', 'Competition']
     gallery: [
-      // Photos AND videos both work here — just list the video files
-      // the same way, e.g.:
-      // { src: 'assets/images/american-rocketry-challenge/launch.mp4', caption: 'Launch day' }
+      { src: 'assets/images/american-rocketry-challenge/rocket-1.mp4', caption: 'Launch 1' },
+      { src: 'assets/images/american-rocketry-challenge/rocket-2.mp4', caption: 'Launch 2' }
     ]
   },
   {
@@ -87,7 +86,7 @@ const EXPERIENCES = [
     section: 'personal',
     dates: 'Jan 2023 – Present',
     location: '',
-    image: 'assets/images/empowered-innovations/plate.jpg',
+    image: 'assets/images/empowered-innovations/coin-calc.jpg',
     oneLiner: 'A nonprofit that designs and 3D-prints assistive devices on request.',
     summary: 'What started as a high school ITEEA REACH Challenge project turned into an ongoing nonprofit. Five of us design and 3D-print assistive devices for anyone who asks — every request is different, so every design starts from scratch.',
     bullets: [
